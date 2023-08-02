@@ -69,7 +69,7 @@
   .plus-btn {
     font-size: 11px;
   }
-  #testimonials {
+  .greybg {
     background-image: url("../img/bg.jpg");
     background-size: cover;
   }
