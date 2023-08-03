@@ -62,15 +62,20 @@
     height: 3px;
     background-color: rgb(248, 164, 26);
   }
-  swiper-slide {
-    width: 300px !important;
-  }
+  /* .swiper {
+    width: 600px;
+    height: 300px;
+  } */
   .minus-btn,
   .plus-btn {
     font-size: 11px;
   }
   .greybg {
     background-image: url("../img/bg.jpg");
+    background-size: cover;
+  }
+  .pizzabg {
+    background-image: url("../img/pizza-bg.jpg");
     background-size: cover;
   }
 }
