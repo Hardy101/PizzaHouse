@@ -172,12 +172,18 @@
             Kids
           </button>
         </div>
-        <div class="pizzas flex px-4 justify-center flex-wrap md:gap-10">
-          <div
-            class="pizza w-1/2 mt-5 text-center shadow-2 p-4 rounded-md md:w-3/12"
+        <swiper-container
+          class="mySwiper pizzas flex px-4 py-10 justify-center flex-wrap md:gap-10"
+          pagination="true"
+          pagination-clickable="true"
+          space-between="30"
+          slides-per-view="3"
+        >
+          <swiper-slide
+            class="pizza w-1/2 my-5 text-center shadow-2 p-4 rounded-md md:w-3/12"
           >
             <div class="pizza-header w-3/5 mx-auto">
-              <img src="img/pproni.png" alt="" class="w-full" />
+              <img src="img/peperoni-pizza.png" alt="" class="w-full" />
             </div>
             <div class="pizza-body mt-3">
               <div class="text-primaryYellow text-xl font-bold">
@@ -219,16 +225,16 @@
               </div>
             </div>
             <div class="pizza-footer"></div>
-          </div>
-          <div
-            class="pizza w-1/2 mt-5 text-center shadow-2 p-4 rounded-md md:w-3/12"
+          </swiper-slide>
+          <swiper-slide
+            class="pizza w-1/2 my-5 text-center shadow-2 p-4 rounded-md md:w-3/12 my-auto"
           >
             <div class="pizza-header w-3/5 mx-auto">
-              <img src="img/pproni.png" alt="" class="w-full" />
+              <img src="img/sausage-pizza.png" alt="" class="w-full" />
             </div>
             <div class="pizza-body mt-3">
               <div class="text-primaryYellow text-xl font-bold">
-                Cheese Pizza
+                Sausage Pizza
               </div>
               <div>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -265,16 +271,16 @@
               </div>
             </div>
             <div class="pizza-footer"></div>
-          </div>
-          <div
-            class="pizza w-1/2 mt-5 text-center shadow-2 p-4 rounded-md md:w-3/12"
+          </swiper-slide>
+          <swiper-slide
+            class="pizza w-1/2 my-5 text-center shadow-2 p-4 rounded-md md:w-3/12 my-auto"
           >
             <div class="pizza-header w-3/5 mx-auto">
-              <img src="img/pproni.png" alt="" class="w-full" />
+              <img src="img/chicken-pizza.png" alt="" class="w-full" />
             </div>
             <div class="pizza-body mt-3">
               <div class="text-primaryYellow text-xl font-bold">
-                Cheese Pizza
+                Chicken Pizza
               </div>
               <div>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -311,8 +317,54 @@
               </div>
             </div>
             <div class="pizza-footer"></div>
-          </div>
-        </div>
+          </swiper-slide>
+          <swiper-slide
+            class="pizza w-1/2 my-5 text-center shadow-2 p-4 rounded-md md:w-3/12 my-auto"
+          >
+            <div class="pizza-header w-3/5 mx-auto">
+              <img src="img/mushroom-pizza.png" alt="" class="w-full" />
+            </div>
+            <div class="pizza-body mt-3">
+              <div class="text-primaryYellow text-xl font-bold">
+                Mushroom Pizza
+              </div>
+              <div>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Provident earum error corporis consequuntur repellendus fuga.
+              </div>
+              <div class="my-3 flex gap-3 justify-center">
+                <button>20cm</button>
+                <button>40cm</button>
+                <button>60cm</button>
+              </div>
+              <!-- Order Amount -->
+              <div class="my-5 flex gap-10 justify-center">
+                <span class="text-primaryYellow font-bold">$5</span>
+                <div class="inline-block flex gap-3">
+                  <button class="minus-btn">
+                    <i
+                      class="las la-minus p-1 rounded-full bg-secondaryYellow text-white"
+                    ></i>
+                  </button>
+                  <span class="font-bold"> 1</span>
+                  <button>
+                    <i
+                      class="las la-plus p-1 rounded-full bg-secondaryYellow text-white"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <a
+                  href=""
+                  class="inline-block px-7 py-2 rounded-3xl gradient-1 mt text-white shadow-md"
+                  >Order Now</a
+                >
+              </div>
+            </div>
+            <div class="pizza-footer"></div>
+          </swiper-slide>
+        </swiper-container>
         <div class="my-10 text-center">
           <a href="" class="py-3 px-7 text-white bg-secondaryYellow rounded-3xl"
             >View All</a
@@ -322,8 +374,10 @@
     </section>
     <!-- About us -->
     <section id="about">
-      <div class="flex gap-10 justify-center flex-wrap py-5">
-        <div class="w-9/12 lg:w-4/12 rounded-2xl overflow-hidden mx-auto">
+      <div class="flex gap-10 justify-center flex-wrap py-20">
+        <div
+          class="w-9/12 rounded-2xl overflow-hidden mx-auto lg:w-4/12 lg:m-0"
+        >
           <img src="img/kitchen.jpg" alt="" class="w-full h-full" />
         </div>
         <div class="w-4/5 lg:w-2/5 my-auto">
@@ -343,7 +397,7 @@
     <!-- Testimonials -->
     <section id="testimonials" class="relative greybg">
       <div class="overlay absolute w-full h-full bg-white opacity-80 z-0"></div>
-      <div class="py-10 flex justify-center flex-wrap">
+      <div class="py-20 flex justify-center flex-wrap">
         <div class="w-4/5 lg:w-2/5 my-auto z-10">
           <h2 class="text-3xl font-bold">What Our Customers Say</h2>
           <h3 class="text-primaryYellow font-bold">
@@ -358,63 +412,82 @@
             clients.
           </p>
         </div>
-        <div class="swiper w-4/5 lg:w-2/5 flex gap-5 mt-10 lg:m-0">
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide w-3/5 shadow-md rounded-md pb-5 bg-white z-10"
-            >
-              <img
-                src="img/testimonials/img-1.jpg"
-                alt=""
-                class="w-1/5 rounded-md"
-              />
-              <p class="px-4 pt-3 text-[#61677A] italic">
-                "I can't resist the temptation of their mouthwatering pizzas!
-                Each bite takes me on a delightful journey of flavors. The crust
-                is perfectly crispy, and the toppings are always fresh. This is
-                definitely my go-to place for pizza!"
-              </p>
-              <p class="text-right pr-10 mt-3 block font-bold">~ Jane S</p>
-              <p class="rating"></p>
-            </div>
-            <!-- =========== -->
-            <div
-              class="swiper-slide w-3/5 shadow-md rounded-md pb-5 bg-white z-10"
-            >
-              <img
-                src="img/testimonials/img-1.jpg"
-                alt=""
-                class="w-1/5 rounded-md"
-              />
-              <p class="px-4 pt-3 text-[#61677A] italic">
-                "I've tried numerous pizza joints, but none come close to the
-                taste and quality of the pizzas from this website. The
-                ingredients they use are top-notch, and you can tell they put a
-                lot of love into making their pizzas. Highly recommended!"
-              </p>
-              <p class="text-right pr-10 mt-3 block font-bold">~ Mark D</p>
-              <p class="rating"></p>
-            </div>
-            <!-- =========== -->
-            <div
-              class="swiper-slide w-3/5 shadow-md rounded-md pb-5 bg-white z-10"
-            >
-              <img
-                src="img/testimonials/img-1.jpg"
-                alt=""
-                class="w-1/5 rounded-md"
-              />
-              <p class="px-4 pt-3 text-[#61677A] italic">
-                "I've tried numerous pizza joints, but none come close to the
-                taste and quality of the pizzas from this website. The
-                ingredients they use are top-notch, and you can tell they put a
-                lot of love into making their pizzas. Highly recommended!"
-              </p>
-              <p class="text-right pr-10 mt-3 block font-bold">~ Mark D</p>
-              <p class="rating"></p>
-            </div>
-          </div>
-        </div>
+        <swiper-container
+          class="mySwiper w-4/5 lg:w-2/5 flex gap-5 mt-10 lg:m-0"
+          pagination="true"
+        >
+          <swiper-slide
+            class="swiper-slide w-3/5 shadow-md rounded-md pb-5 bg-white z-10"
+          >
+            <img
+              src="img/testimonials/img-1.jpg"
+              alt=""
+              class="w-1/5 rounded-md"
+            />
+            <p class="px-4 pt-3 text-[#61677A] italic">
+              "I can't resist the temptation of their mouthwatering pizzas! Each
+              bite takes me on a delightful journey of flavors. The crust is
+              perfectly crispy, and the toppings are always fresh. This is
+              definitely my go-to place for pizza!"
+            </p>
+            <p class="text-right pr-10 mt-3 block font-bold">~ Jane S</p>
+            <p class="rating"></p>
+          </swiper-slide>
+          <!-- =========== -->
+          <swiper-slide
+            class="swiper-slide w-3/5 shadow-md rounded-md pb-5 bg-white z-10"
+          >
+            <img
+              src="img/testimonials/img-1.jpg"
+              alt=""
+              class="w-1/5 rounded-md"
+            />
+            <p class="px-4 pt-3 text-[#61677A] italic">
+              "I've tried numerous pizza joints, but none come close to the
+              taste and quality of the pizzas from this website. The ingredients
+              they use are top-notch, and you can tell they put a lot of love
+              into making their pizzas. Highly recommended!"
+            </p>
+            <p class="text-right pr-10 mt-3 block font-bold">~ Mark D</p>
+            <p class="rating"></p>
+          </swiper-slide>
+          <!-- =========== -->
+          <swiper-slide
+            class="swiper-slide w-3/5 shadow-md rounded-md pb-5 bg-white z-10"
+          >
+            <img
+              src="img/testimonials/img-1.jpg"
+              alt=""
+              class="w-1/5 rounded-md"
+            />
+            <p class="px-4 pt-3 text-[#61677A] italic">
+              "I am a pizza enthusiast, and this website has exceeded all my
+              expectations. Their wide variety of pizzas allows me to explore
+              different combinations and try something new each time. Trust me,
+              you won't be disappointed!"
+            </p>
+            <p class="text-right pr-10 mt-3 block font-bold">~ Sarah L.</p>
+            <p class="rating"></p>
+          </swiper-slide>
+          <!-- =========== -->
+          <swiper-slide
+            class="swiper-slide w-3/5 shadow-md rounded-md pb-5 bg-white z-10"
+          >
+            <img
+              src="img/testimonials/img-1.jpg"
+              alt=""
+              class="w-1/5 rounded-md"
+            />
+            <p class="px-4 pt-3 text-[#61677A] italic">
+              "As a vegetarian, I often struggle to find exciting pizza options.
+              However, this website has an excellent selection of veggie pizzas
+              that are incredibly delicious. Finally, a place that understands
+              and caters to my preferences!"
+            </p>
+            <p class="text-right pr-10 mt-3 block font-bold">~ Alex M.</p>
+            <p class="rating"></p>
+          </swiper-slide>
+        </swiper-container>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
@@ -425,27 +498,25 @@
         <h3 class="text-primaryYellow font-bold">OUR CHEFS</h3>
         <h2 class="font-bold text-3xl my-3">Meet Out Great Chefs</h2>
         <p class="w-3/5 mx-auto">
-          Are you a pizza Lover? if your answer is yes then this restaurant is
-          for you. We sell pizza and other wonderful delicacies like you aint
-          seen before. Meet the talents behind our delicacies.
+          Meet the exceptional talents behind our extraordinary menu.
         </p>
-        <div class="flex gap-5 justify-center mt-10 flex-col lg:flex-row">
-          <div class="w-full overflow-hidden rounded-md relative lg:w-1/5">
-            <img src="img/chef/chef-1.jpg" alt="" class="w-full h-full" />
+        <div class="flex gap-5 justify-center mt-10 flex-col md:flex-row">
+          <div class="w-full overflow-hidden rounded-md relative md:w-2/5">
+            <img src="img/chef/chef-1.jpg" alt="" class="w-full" />
             <div class="chef-detail absolute bottom-0 w-full bg-White40 py-2">
               <span class="block font-bold">Jonathan Choi</span>
               <span>Senior Chef</span>
             </div>
           </div>
-          <div class="w-full overflow-hidden rounded-md relative lg:w-1/5">
-            <img src="img/chef/chef-2.jpg" alt="" class="w-full h-full" />
+          <div class="w-full overflow-hidden rounded-md relative md:w-2/5">
+            <img src="img/chef/chef-2.jpg" alt="" class="w-full" />
             <div class="chef-detail absolute bottom-0 w-full bg-White40 py-2">
               <span class="block font-bold">Patrick Bates</span>
               <span>Senior Chef</span>
             </div>
           </div>
-          <div class="w-full overflow-hidden rounded-md relative lg:w-1/5">
-            <img src="img/chef/chef-4.jpg" alt="" class="w-full h-full" />
+          <div class="w-full overflow-hidden rounded-md relative md:w-2/5">
+            <img src="img/chef/chef-4.jpg" alt="" class="w-full" />
             <div class="chef-detail absolute bottom-0 w-full bg-White40 py-2">
               <span class="block font-bold">Chris Briggs</span>
               <span>Senior Chef</span>
@@ -567,20 +638,6 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
-
-    <script>
-      // core version + navigation, pagination modules:
-      import Swiper from "swiper";
-      import { Navigation } from "swiper/modules";
-      // import Swiper and modules styles
-      import "swiper/css";
-      import "swiper/css/navigation";
-
-      // init Swiper:
-      const swiper = new Swiper(".swiper", {
-        // configure Swiper to use modules
-        modules: [Navigation],
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   </body>
 </html>
